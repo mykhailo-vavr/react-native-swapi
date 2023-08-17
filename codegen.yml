@@ -1,0 +1,9 @@
+schema: './src/graphql/schema.graphql' # URL до схеми Apollo Studio
+documents:
+  - './src/graphql/queries/*.graphql' # Шлях до ваших файлів квері
+generates:
+  ./src/__generated__/graphql.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'

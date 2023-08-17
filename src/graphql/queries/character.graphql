@@ -1,0 +1,28 @@
+query GetCharacters {
+  allPeople {
+    people {
+      id
+      name
+    }
+  }
+}
+
+query GetCharacter($id: ID) {
+  person(id: $id) {
+    id
+    name
+    birthYear
+    height
+    mass
+    homeworld {
+      id
+      name
+    }
+    filmConnection {
+      films {
+        id
+        title
+      }
+    }
+  }
+}

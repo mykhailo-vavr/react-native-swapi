@@ -1,0 +1,34 @@
+query GetMovies {
+  allFilms {
+    films {
+      id
+      title
+      releaseDate
+      openingCrawl
+    }
+  }
+}
+
+query GetMovie($id: ID) {
+  film(id: $id) {
+    id
+    title
+    releaseDate
+    openingCrawl
+    speciesConnection {
+      totalCount
+    }
+    planetConnection {
+      totalCount
+    }
+    vehicleConnection {
+      totalCount
+    }
+    characterConnection {
+      characters {
+        id
+        name
+      }
+    }
+  }
+}
